@@ -26,7 +26,7 @@ public class speechRecognizerWidget extends AppWidgetProvider {
         views.setImageViewResource(R.id.appwidget_image,R.drawable.microphoneicon2);
 
         Intent configIntent = new Intent(context, MainActivity.class);
-
+        configIntent.putExtra("WIDGET","widget");
         PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
 
         views.setOnClickPendingIntent(R.id.widgetParentLayout, configPendingIntent);

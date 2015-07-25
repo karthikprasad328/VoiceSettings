@@ -46,10 +46,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.button1).setOnClickListener(this);
-
         TextView textView=(TextView)findViewById(R.id.commandText);
         textView.setText("Commands:-\n---------------\nLess Brightness\nMore Brightness\nScreen Rotation\nFlashlight\nWifi\nLocation\nBluetooth\nSound");
 
+        Intent intent=getIntent();
+        if(intent != null)
+        {
+            if(intent.getSerializableExtra("WIDGET") != null){
+                onClick(findViewById(R.id.button1));
+            }
+        }
     }
 
     @Override
