@@ -1,4 +1,4 @@
-package com.example.kprasad.speechrecognizer;
+package com.kprasad.speechrecognizer;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -23,9 +23,9 @@ public class speechRecognizerWidget extends AppWidgetProvider {
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.speech_recognizer_widget);
         //views.setTextViewText(R.id.appwidget_text, widgetText);
-        views.setImageViewResource(R.id.appwidget_image,R.drawable.microphoneicon2);
-
-        Intent configIntent = new Intent(context, MainActivity.class);
+        //views.setImageViewResource(R.id.appwidget_image,R.drawable.microphoneicon2);
+        views.setImageViewResource(R.id.appwidget_image,R.drawable.microphoneicon);
+        Intent configIntent = new Intent(context, com.kprasad.speechrecognizer.MainActivity.class);
         configIntent.putExtra("WIDGET","widget");
         PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
 
@@ -60,7 +60,7 @@ public class speechRecognizerWidget extends AppWidgetProvider {
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.speech_recognizer_widget);
         //views.setTextViewText(R.id.appwidget_text, widgetText);
-        views.setImageViewResource(R.id.appwidget_image,R.drawable.microphoneicon2);
+        views.setImageViewResource(R.id.appwidget_image,R.drawable.microphoneicon);
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

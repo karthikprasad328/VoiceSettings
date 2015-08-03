@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">VoiceSettings</string>
+    <string name="app_name">SaySettings</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_feedback">FeedBack</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="initial_text_detection">Press microphone icon and Say one of the commands below</string>
+    <string name="eula">COPYRIGHTS:\n\nThis software may, in whole or in any part, be copied, reproduced, transmitted, translated (into any language, natural or computer), stored in a retrieval system, reduced to any electronic medium or machine readable format, or by any other form or means without prior consent, in writing, from Karthik Nanjundaswamy Guru Prasad.\nThe software may be used or copied only in accordance with the terms of that license, which is described in the following paragraphs.\n\nLICENSE:\n\n\"THE SOFTWARE\" SHALL BE TAKEN TO MEAN THE SOFTWARE CONTAINED IN THIS PACKAGE AND ANY SUBSEQUENT VERSIONS OR UPGRADES RECEIVED AS A RESULT OF HAVING PURCHASED THIS PACKAGE. "BUYER" SHALL BE TAKEN AS THE ORIGINAL PURCHASER OF THE SOFTWARE.\nBUYER MAY ELECTRONICALLY TRANSFER THE PROGRAM FROM ONE COMPUTER TO ANOTHER OVER ANY TYPE OF NETWORK. BUYER MAY DISTRIBUTE COPIES OF THE SOFTWARE OR THE ACCOMPANYING DOCUMENTATION TO OTHERS EITHER FOR A FEE OR WITHOUT CHARGE. BUYER MAY NOT MODIFY OR TRANSLATE THE PROGRAM OR DOCUMENTATION. USER MAY DISASSEMBLE THE PROGRAM OR ALLOW IT TO BE DISASSEMBLED INTO ITS CONTITUENT SOURCE CODE. BUYER\'S USE OF THE SOFTWARE INDICATES HIS/HER ACCEPTANCE OF THESE TERMS AND CONDITIONS. IF BUYER DOES NOT AGREE TO THESE CONDITIONS, RETURN THE DISTRIBUTION MEDIA, DOCUMENTATION, AND ASSOCIATED MATERIALS TO THE VENDOR FROM WHOM THE SOFTWARE WAS PURCHASED, AND ERASE THE SOFTWARE FROM ANY AND ALL STORAGE DEVICES UPON WHICH IT MAY HAVE BEEN INSTALLED.\n\nDISCLAIMER / LIMITATION OF LIABILITY:\n\nBUYER ACKNOWLEDGES THAT THE SOFTWARE MAY NOT BE FREE FROM DEFECTS AND MAY NOT SATISFY ALL OF BUYER\'S NEEDS. THE SOFTWARE AND ANY ACCOMPANYING WRITTEN MATERIALS ARE LICENSED \"AS IS\". IN NO EVENT WILL KARTHIK NANJUNDASWAMY GURU PRASAD BE LIABLE FOR DIRECT, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGE OR DAMAGES RESULTING FROM LOSS OF USE, OR LOSS OF ANTICIPATED PROFITS RESULTING FROM ANY DEFECT IN THE PROGRAM, EVEN IF IT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </string>
 </resources>

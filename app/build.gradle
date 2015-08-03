@@ -5,16 +5,33 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.example.kprasad.speechrecognizer"
+        applicationId "com.kprasad.speechrecognizer"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
     }
+
+    signingConfigs{
+        releaseConfig{
+            storeFile file("SaySettingsKey.jks");
+            storePassword("_Ngkar123");
+            keyAlias "pw";
+            keyPassword "_Ngkar123";
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug{
+            debuggable true
+            applicationIdSuffix ".debug"
+
         }
     }
 }
@@ -22,4 +39,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
 }

@@ -1,4 +1,4 @@
-package com.example.kprasad.speechrecognizer;
+package com.kprasad.speechrecognizer;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,6 +12,8 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.location.LocationManager;
 import android.media.AudioManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.speech.RecognizerIntent;
@@ -33,7 +35,7 @@ import java.util.ArrayList;
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     protected static final int REQUEST_OK = 1;
-    static Boolean isFlashlightDisabled = true;
+    //static Boolean isFlashlightDisabled = true;
     static Boolean isSoundEnabled = true;
     private Camera camera;
     Camera.Parameters params;
@@ -45,6 +47,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        new com.kprasad.speechrecognizer.SimpleEula(this).show();
         findViewById(R.id.button1).setOnClickListener(this);
         TextView textView=(TextView)findViewById(R.id.commandText);
         textView.setText("Commands:-\n---------------\nLess Brightness\nMore Brightness\nScreen Rotation\nFlashlight\nWifi\nLocation\nBluetooth\nSound");
@@ -62,6 +65,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -73,8 +77,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_feedback) {
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"karthikprasad328@gmail.com"});
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "FEEDBACK: SaySettings");
+            emailIntent.setType("message/rfc822");
+            startActivity(emailIntent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -82,13 +90,59 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, "en-US");
-        try {
-            startActivityForResult(i, REQUEST_OK);
-        } catch (Exception e) {
-            Toast.makeText(this, "Error initializing speech to text engine.", Toast.LENGTH_LONG).show();
+        boolean isConnectedToNetwork = checkNetwork();
+        if(isConnectedToNetwork) {
+            Intent i = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+            i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+            //i.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"en-UK");
+            try {
+                startActivityForResult(i, REQUEST_OK);
+            } catch (Exception e) {
+                Toast.makeText(this, "Error initializing speech-to-text engine. Not found.", Toast.LENGTH_LONG).show();
+            }
         }
+        else{
+            showAlertDialog(this, "No Internet Connection",
+                    "You don't have internet connection.");
+        }
+    }
+
+    private boolean checkNetwork() {
+        boolean wifiDataAvailable = false;
+        boolean mobileDataAvailable = false;
+        ConnectivityManager conManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] networkInfo = conManager.getAllNetworkInfo();
+        for (NetworkInfo netInfo : networkInfo) {
+            if (netInfo.getTypeName().equalsIgnoreCase("WIFI"))
+                if (netInfo.isConnected())
+                    wifiDataAvailable = true;
+            if (netInfo.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (netInfo.isConnected())
+                    mobileDataAvailable = true;
+        }
+        return wifiDataAvailable || mobileDataAvailable;
+    }
+
+    public void showAlertDialog(Context context, String title, String message) {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+
+        // Setting Dialog Title
+        alertDialog.setTitle(title);
+
+        // Setting Dialog Message
+        alertDialog.setMessage(message);
+
+        // Setting alert dialog icon
+        alertDialog.setIcon(R.drawable.failicon);
+
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
     }
 
     @Override
@@ -114,7 +168,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             setAutoOrientationEnabled(getApplicationContext());
         } else if (thingsYouSaid.get(0).contains("flashlight") || thingsYouSaid.get(0).contains("flash light")) {
             flashLightToggle();
-        } else if (thingsYouSaid.get(0).contains("wifi")) {
+        } else if (thingsYouSaid.get(0).toLowerCase().contains("wifi")
+                || thingsYouSaid.get(0).toLowerCase().contains("wi-fi")){
             wifiToggle();
         } else if (thingsYouSaid.get(0).contains("location")) {
             locationServicesToggle();

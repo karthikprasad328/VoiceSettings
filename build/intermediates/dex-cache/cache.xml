@@ -2,20 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-6e06e14146c81276193daf2faf5dcbaefad0d9e0.jar" />
-    </item>
-    <item
-        jar="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/pre-dexed/debug/classes-d39734784d32e74b19d6561c9c27c83c22510ea1.jar" />
-    </item>
-    <item
         jar="/Users/kprasad/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -23,11 +9,53 @@
         <dex dex="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-978980bdfdb7c9553795c809d37533a401a08b82.jar" />
     </item>
     <item
+        jar="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/pre-dexed/release/classes-13b7e3dc7d2c7eb1fc581876d2b018278c737f5e.jar" />
+    </item>
+    <item
+        jar="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-6e06e14146c81276193daf2faf5dcbaefad0d9e0.jar" />
+    </item>
+    <item
+        jar="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/pre-dexed/release/internal_impl-22.2.0-268f15b59bfaf2aa7faa51dc61b32138e126c10b.jar" />
+    </item>
+    <item
         jar="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
         <dex dex="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/pre-dexed/debug/classes-690fc5d05b4b21dac5e326168264bd9e24cf4934.jar" />
+    </item>
+    <item
+        jar="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/pre-dexed/release/classes-ccd2245fb634d8a7eb70e0d4d7ec4f068061cc43.jar" />
+    </item>
+    <item
+        jar="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/kprasad/Documents/ASPROJECTS/VoiceSettings/app/build/intermediates/pre-dexed/release/classes-a2796354c873c9926528b1e162cba4c2f9dbc5e4.jar" />
+    </item>
+    <item
+        jar="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/kprasad/Downloads/SpeechRecognizer/app/build/intermediates/pre-dexed/debug/classes-d39734784d32e74b19d6561c9c27c83c22510ea1.jar" />
     </item>
 
 </items>

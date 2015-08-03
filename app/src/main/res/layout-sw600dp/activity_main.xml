@@ -11,10 +11,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cautionText"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:text="\nCaution :- This app needs a connection to the internet via the wifi or the cellular data. \nIf you turn off both, then this app will not recognize your words."
             />
-        
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -30,7 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
-            android:textSize="22dp"/>
+            android:textSize="28dp"/>
 
         <View
             android:layout_width="match_parent"
@@ -41,8 +41,8 @@
             android:background="#ff000000"/>
 
         <ImageButton
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:layout_below="@+id/divider2"
             android:id="@+id/button1"
             android:layout_centerHorizontal="true"
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/commandText"
-                android:textSize="22sp"
+                android:textSize="28sp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 />
