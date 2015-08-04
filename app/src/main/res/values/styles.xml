@@ -1,8 +1,18 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/my_awesome_color</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/my_awesome_darker_color</item>
+        <!-- navigationBarColor is used for bottom navigationBar -->
+        <item name="android:navigationBarColor">@color/my_awesome_color</item>
+
+        <item name="android:textColorPrimary">#ffffff</item>
+
     </style>
 
 </resources>

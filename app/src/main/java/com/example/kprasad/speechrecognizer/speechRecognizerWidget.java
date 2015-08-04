@@ -28,9 +28,7 @@ public class speechRecognizerWidget extends AppWidgetProvider {
         Intent configIntent = new Intent(context, com.kprasad.speechrecognizer.MainActivity.class);
         configIntent.putExtra("WIDGET","widget");
         PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
-
         views.setOnClickPendingIntent(R.id.widgetParentLayout, configPendingIntent);
-
         ComponentName thisWidget = new ComponentName(context, speechRecognizerWidget.class);
         AppWidgetManager manager = AppWidgetManager.getInstance(context);
         manager.updateAppWidget(thisWidget, views);
@@ -54,7 +52,7 @@ public class speechRecognizerWidget extends AppWidgetProvider {
         // Enter relevant functionality for when the last widget is disabled
     }
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+    static void  updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
         // Construct the RemoteViews object
